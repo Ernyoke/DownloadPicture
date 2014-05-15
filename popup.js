@@ -24,22 +24,23 @@ var buffer = [];
 function showLinks() {
 	var div = document.getElementById("images");
 	for(var i = 0; i < allLinks.length; ++i) {
-		var img = document.createElement("img");
-		img.src = allLinks[i];
-		img.style.width = '50px';
+		if(allLinks[i] != undefined) {
+			var img = document.createElement("img");
+			img.src = allLinks[i];
+			img.style.width = '50px';
 
-		var br = document.createElement("br");
+			var br = document.createElement("br");
 
-		var checkbox = document.createElement('input');
-		checkbox.type = "checkbox";
-		checkbox.id = "ck" + i;
-		var img_d = new imageToDownload(allLinks[i], "ck" + i);
-		buffer.push(img_d);
+			var checkbox = document.createElement('input');
+			checkbox.type = "checkbox";
+			checkbox.id = "ck" + i;
+			var img_d = new imageToDownload(allLinks[i], "ck" + i);
+			buffer.push(img_d);
 
-		div.appendChild(img);
-		div.appendChild(checkbox);
-		div.appendChild(br);
-
+			div.appendChild(img);
+			div.appendChild(checkbox);
+			div.appendChild(br);
+		}
 	}
 }
 
