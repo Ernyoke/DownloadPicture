@@ -55,13 +55,6 @@ function download() {
 		}
 	}
 
-	var w = document.createElement("p");
-	var btn=document.createTextNode(src);
-	w.appendChild(btn);
-
-	var x =document.getElementById("www");
-	x.appendChild(w);
-
 
 }
 
